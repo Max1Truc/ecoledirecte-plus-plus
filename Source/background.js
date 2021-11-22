@@ -24,7 +24,7 @@ function marksListener(details) {
     var parsed = JSON.parse(str);
 
     for (key in parsed.data.parametrage) {
-      if (key.toLowerCase().split("uniquement").length == 1) {
+      if (key != "affichagePositionMatiere" && key.toLowerCase().split("uniquement").length == 1) {
         // Only executed if the parameter doesn't restrict the user to some things
         // (Contains the word "uniquement")
         if (!parsed.data.parametrage[key]) {

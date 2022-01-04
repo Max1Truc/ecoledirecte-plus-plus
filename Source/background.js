@@ -45,7 +45,7 @@ function marksListener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   marksListener,
   {
-    urls: ["https://api.ecoledirecte.com/v3/eleves/*/notes.awp?verbe=get&"],
+    urls: ["https://api.ecoledirecte.com/v3/eleves/*/notes.awp*"],
   },
   ["blocking"]
 );
